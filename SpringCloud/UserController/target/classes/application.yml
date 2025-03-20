@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    loadbalancer:
+          cache:
+            enabled: true
+            ttl: 300s  # Time-to-live for cache
+            capacity: 1000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
